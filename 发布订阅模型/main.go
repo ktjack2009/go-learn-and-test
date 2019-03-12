@@ -3,8 +3,8 @@
 package main
 
 import (
-	"BaseLearning/发布订阅模型/pubsub"
 	"fmt"
+	"go-learn-and-test/发布订阅模型/pubsub"
 	"strings"
 	"time"
 )
