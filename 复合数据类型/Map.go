@@ -9,9 +9,9 @@ func MapDemo1() {
 	fmt.Println(dict["abc"])
 	//dict["abcd"] = 0		// 赋值为零值，exist会为true
 	_, exist := dict["abcd"]
-	fmt.Println(exist)   // 判断是否存在
-	delete(dict, "abcd") // 即使key不存在也不会报错
-	for index, value := range dict {
+	fmt.Println(exist)               // 判断是否存在
+	delete(dict, "abcd")             // 即使key不存在也不会报错
+	for index, value := range dict { // map遍历是无序的
 		fmt.Println(index, value)
 	}
 }

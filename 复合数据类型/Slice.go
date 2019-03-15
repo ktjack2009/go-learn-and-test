@@ -29,7 +29,7 @@ func SliceDemo3() {
 	a := []int{1, 2, 3, 4, 5}
 	a = append(a, 0)
 	fmt.Println(a)
-	copy(a[3:], a[2:])
+	copy(a[3:], a[2:]) // 在某个位置增加一个元素
 	fmt.Println(a)
 	a[2] = 10
 	fmt.Print(a)
@@ -41,7 +41,7 @@ func SliceDemo4() {
 	b := s[:0]
 	for _, x := range s {
 		if x != " " {
-			b = append(b, x)
+			b = append(b, x) // append函数用于追加元素
 		}
 	}
 	fmt.Print(b)
@@ -57,7 +57,7 @@ func Sum(a int, more ...int) int {
 func main() {
 	// SliceDemo1()
 	// SliceDemo2()
-	// SliceDemo3()
+	SliceDemo3()
 	// SliceDemo4()
-	fmt.Print(Sum(1, 2, 3, 4, 5, 6, 7))
+	// fmt.Print(Sum(1, 2, 3, 4, 5, 6, 7))
 }

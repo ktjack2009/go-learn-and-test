@@ -2,16 +2,17 @@ package main
 
 import "fmt"
 
+const (
+	USD int = iota
+	EUR
+	GBP
+	RMB
+)
+
 func ArrayDemo1() {
-	array := [5]int{10, 20, 30, 40, 50}
-	array2 := array
-	array2[0] = 50 // 只是值赋值，并不会改变array中的值，与python的list的区别
-	for _, v := range array {
-		fmt.Println(v)
-	}
-	for _, v := range array2 {
-		fmt.Println(v)
-	}
+	symbol := [...]string{USD: "$", EUR: "€", GBP: "￡", RMB: "￥"}
+	fmt.Println(RMB, symbol[RMB])
+
 }
 
 func ArrayDemo2() {
@@ -31,5 +32,6 @@ func ArrayDemo2() {
 }
 
 func main() {
-	ArrayDemo2()
+	ArrayDemo1()
+	// ArrayDemo2()
 }
