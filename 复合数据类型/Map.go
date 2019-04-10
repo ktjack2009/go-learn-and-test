@@ -25,7 +25,16 @@ func MapDemo2() {
 	fmt.Println(s)
 }
 
+func MapDemo3(a map[string]string) {
+	a["a"] = "a"
+}
+
 func main() {
 	// MapDemo1()
-	MapDemo2()
+	// MapDemo2()
+	b := map[string]string{
+		"b": "b",
+	}
+	MapDemo3(b)
+	fmt.Println(b)
 }
